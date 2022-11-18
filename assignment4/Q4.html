@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q4</title>
+</head>
+<body>
+    <p>POP UP</p>
+    <div id="selected" width="100px" height="100px" style="display:none; border:2px solid black;">
+       POP UP Box appeared
+    </div>
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+        $("p").click(function(){
+            $('#selected').css({"display":"block","width":"100px","height":"100px"})
+        })
+    </script>
+</body>
+</html>

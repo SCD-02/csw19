@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q2</title>
+</head>
+<body>
+        <p class="c">Click me!</p>
+        <div class="click1"></div>
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+        $('.c').on({click: function(){
+            $('.click1').text('It is clicked');
+        },
+        dblclick: function(){
+            $('.click1').text("It is double clicked")
+        }})
+        
+    </script>
+</body>
+</html>

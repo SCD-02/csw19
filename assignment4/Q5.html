@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q5</title>
+    <style>
+        .box{
+            width:100px;
+            height: 100px;
+            margin: 5px;
+        }
+        .box1{
+            background-color: red;
+        }
+        .box2{
+            background-color: green;
+        }
+        .box3{
+            position:relative;
+            background-color: blue;
+        }
+        .box4{
+            display: none;
+            background-color: yellow;
+        }
+        h1{
+            display: none;
+        }
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">one</div>
+    <div class="box box2">two</div>
+    <div class="box box3">three</div>
+    <button class="btn1">FadeIn method</button><br>
+    <button class="btn2">Hide method</button><br>
+    <div class="box box4">four</div>
+    <button class="btn3">show method</button>
+    <h1>I appeared</h1>
+    <ul>
+        <li>box1234</li>
+        <li>box1234</li>
+        <li>box1234</li>
+        <li>box1234</li>
+    </ul>
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="logo" >
+    <br><button class="btn4">Get attr of img</button>
+    <div class="addhtml">To add html</div>
+    <button class="btn5">To add an html element in the above tag</button>
+    
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+        $('.box1').bind({click:function(){
+            $(".box2").slideUp()
+        },dblclick:function(){
+            $(".box2").slideDown()
+        }})
+        $('.box2').click(function(){
+            $('.box3').animate(
+                {
+                    left:'500px',
+                    opacity: '0.2'
+                }
+            )
+        })
+        $('.btn1').click(function(){
+            $('.box4').fadeIn(3000)
+        })
+        $('.btn2').click(function(){
+            $('.box4').hide(2000)
+        })
+        $('.btn3').click(function(){
+            $('h1').show(2000)
+        })
+        $('ul').on({
+            mouseenter:function(){
+                $('li').hide();
+            },
+            mouseleave:function(){
+                $('li').show();
+            }
+        })
+        $('.btn4').click(function(){
+            alert($('img').attr("width"))
+        })
+        $('.btn5').click(function(){
+            $('.addhtml').html("<em>I am added</em>")
+        })
+    </script>
+</body>
+</html>

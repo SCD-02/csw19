@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+</head>
+<body>
+        <form action="#">
+            <label>Input1
+                <input type="text" id="field1">
+            </label>
+            <label>Input2
+                <input type="text" id="field2">
+            </label>
+        </form>
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+        $("#field1").blur(function(){
+            $("#field2").css("background-color","red")
+        })
+        // $("#field2").focus(function(){
+        //     $(this).css("background-color","blue")
+        // })
+        
+        
+    </script>
+</body>
+</html>
